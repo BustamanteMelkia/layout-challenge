@@ -1,0 +1,247 @@
+
+/** Custom properties **/
+:root{
+    --color-primario :rgb(7, 59, 7);
+}
+/** ======================= Globals ======================= **/
+
+/** apply a natural box layout model to all elements, but allowing components to change **/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /** formatear: 1 rem = 10 px **/
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(../img/hojas.jpg);
+    /** La imagen se mantiene fija **/
+    background-attachment: fixed;
+    /** Centrar la imagen **/
+    background-position: center center;
+    /** Escala la imagen al mayor tamaño posible sin estirarla.  **/
+    background-size: cover;
+}
+
+.contenedor{
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+}
+img{
+    max-width: 100%;
+}
+.btn{
+    padding: 1.5rem 2rem;
+    text-decoration: none;
+    background-color: var(--color-primario);
+    color: #ffffff;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+.btn:hover{
+    background-color: rgb(18, 110, 18);
+}
+h1,h2,h3{
+    margin: 0;
+    text-align: center;
+}
+p{
+    margin: 0;
+    text-align: center;
+}
+
+/**========================== Header =============================**/
+@media (min-width: 768px){
+    .site-header{
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+.site-header h1{
+    text-transform: uppercase;
+    letter-spacing: 0.8rem;
+    background-color: var(--color-primario);
+    color: #ffffff;
+    padding: 2rem 0;
+    flex: 0 0 50%;
+    border-radius: 0.5rem;
+}
+
+/** ======================= Navegación ========================= **/
+#navegacion ul{
+    list-style: none;
+    padding: 0;
+    background-color: rgb(53, 50, 50);
+}
+@media (min-width:768px){
+    #navegacion ul{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+
+#navegacion ul li{
+    text-align: center;
+}
+#navegacion ul li:hover{
+    background-color: rgba(0,0, 0, 0.5);
+}
+@media (min-width: 768px){
+    #navegacion ul li{
+        flex: 0 0 calc(20% - 1rem);
+    }
+}
+
+
+#navegacion ul li a{
+    display: inline-block;
+    padding: 2rem 0;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+/** ==================== Hero ==================== **/
+.hero{
+    background-image: url(../img/rojo.jpg);
+    height: 20rem;
+}
+
+/** ==================== main ==================== **/
+.contenido-principal{
+    margin-top: 4rem;
+}
+
+@media (min-width :768px){
+    .contenido-principal{
+        display: flex;
+        justify-content: space-between;
+    }
+    .sidebar{
+        flex: 0 0 calc(35% - 1rem);
+    }
+}
+
+/** =================== Post ======================== **/
+.post{
+    margin-bottom: 3rem;
+}
+@media (min-width :768px){
+    .post{
+        flex: 0 0 calc(65% - 1rem);
+    }
+}
+
+
+/** Encabezado post **/
+.encabezado-post{
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px){
+    .encabezado-post{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.descripcion-post{
+    margin-bottom: 2rem;
+    color: var(--color-primario);
+}
+@media (min-width: 768px){
+    .descripcion-post{
+        flex: 1;
+        text-align: left;
+    }
+}
+
+.descripcion-post .titulo{
+    text-transform: uppercase;
+}
+.descripcion-post .fecha{
+    font-size: 1.4rem;
+    font-style: oblique;
+}
+@media (min-width: 768px){
+    .descripcion-post .titulo,
+    .descripcion-post .fecha{
+        text-align: left;
+    }
+}
+
+
+.comentarios .d-inline-block{
+    display: block;
+}
+@media (min-width: 768px){
+    .comentarios{
+        flex: 0 0 17rem;
+    }
+}
+
+.contenido-post{
+    text-align: justify;    
+}
+
+/** Sidebar**/
+.contenido-sidebar h3{
+    margin-bottom: 3rem;
+    background: url(../img/lines.png) ;
+    color: var(--color-primario);
+}
+.contenido-sidebar h3 span{
+    background-color: #ffffff;
+}
+
+
+/** Contacto **/
+.formulario{
+    margin-top: 4rem;
+}
+.formulario legend{
+    display: block;
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--color-primario);
+}
+
+.campo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+.campo label{
+    flex: 0 0 10rem;
+}
+.campo input{
+    flex: 1;
+    padding: 1rem 0;
+}
+@media (min-width: 768px){
+    .campo label,
+    .campo input{
+        flex: 0 0 100%
+    }
+}
+
+/** Footer **/
+.site-footer{
+    background: rgba(51,51, 51, 0.70);
+    padding: 2rem 0;
+}
+.site-footer .info-header{
+    color: #ffffff;
+    font-size: 2rem;
+}

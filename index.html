@@ -10,10 +10,12 @@
 </head>
 <body>
     <div class="contenedor">
-        <header id="site-header">
+        <!--HEADER-->
+        <header class="site-header">
             <h1>Practicando JS</h1>
         </header>
-        <nav id="#navegacion">
+        <!--NAVEGATION-->
+        <nav id="navegacion">
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Calculadora</a></li>
@@ -22,20 +24,21 @@
                 <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
+        <!--HERO-->
         <div class="hero">
-            <img src="img/rojo.jpg" alt="hero">
         </div>
+
         <main class="contenido-principal">
             <article class="post">
                 <div class="encabezado-post">
-                    <div class="post-header">
-                        <h2 id="titulo-post">Lorem insun</h2>
-                        <p id="fecha-post">
+                    <div class="descripcion-post">
+                        <h2 class="titulo">Lorem insun</h2>
+                        <p class="fecha">
                             Publicado el Miércoles 24 de Junio de 2020
                         </p>
                     </div>
-                    <div class="comentario">
-                        <a href="#">92 Comentarios</a>
+                    <div class="comentarios">
+                        <a href="#" class="btn d-inline-block">92 Comentarios</a>
                     </div>
                 </div>
                 <p class="contenido-post">
@@ -50,15 +53,47 @@
                     dolores asperiores quam culpa autem. Alias adipisci cumque possimus similique ipsum suscipit?
                 </p>
             </article>
+            <aside class="sidebar">
+                <div class="contenido-sidebar">
+                    <h3> <span> ¿Quién soy? </span> </h3>
+                    <img src="img/caracol.jpg" alt="imagen-caracol">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Libero sapiente facere doloribus magnam porro omnis facilis maiores error, 
+                        dolores asperiores quam culpa autem. 
+                    </p>
+                </div>
+                <div class="contacto">
+                    <form class="formulario">
+                        <legend>Registro al sistema</legend>
+                        <div class="campo">
+                            <label for="name">Nombre</label>
+                            <input type="text" name="name" placeholder="Nombre">
+                        </div>
+                        <div class="campo">
+                            <label for="password">Contraseña</label>
+                            <input type="password" name="password" placeholder="Contraseña">
+                        </div>
+                        <div class="campo">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" placeholder="Correo Electrónico">
+                        </div>
+                        <div id="registrar">
+                            <input type="submit" class="btn" value="Registrarse">
+                        </div>
+                        
+                    </form>
+                </div>
+            </aside>
         </main>
-    </div>
-
-    <footer class="site-footer contenedo">
+    </div>  
+    <footer class="site-footer">
         <div class="info-header">
             <p>Derechos Reservados &copy;</p>
         </div>
-
     </footer>
+
+
         
     
     
