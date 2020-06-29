@@ -110,10 +110,9 @@ p{
     font-size: 2rem;
 }
 
-/** ==================== Hero ==================== **/
-.hero{
-    background-image: url(../img/rojo.jpg);
-    height: 20rem;
+/** ==================== slider ================= **/
+.bx-wrapper, .bx-viewport{
+    height: 300px !important;
 }
 
 /** ==================== main ==================== **/
@@ -132,16 +131,18 @@ p{
 }
 
 /** =================== Post ======================== **/
-.post{
+.publicaciones{
     margin-bottom: 3rem;
 }
 @media (min-width :768px){
-    .post{
+    .publicaciones{
         flex: 0 0 calc(65% - 1rem);
     }
 }
 
-
+.post{
+    margin-bottom: 5rem;
+}
 /** Encabezado post **/
 .encabezado-post{
     margin-bottom: 2rem;
