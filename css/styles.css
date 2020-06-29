@@ -1,8 +1,5 @@
 
-/** Custom properties **/
-:root{
-    --color-primario :rgb(7, 59, 7);
-}
+
 /** ======================= Globals ======================= **/
 
 /** apply a natural box layout model to all elements, but allowing components to change **/
@@ -17,7 +14,6 @@ html {
 body{
     font-size: 1.6rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image: url(../img/hojas.jpg);
     /** La imagen se mantiene fija **/
     background-attachment: fixed;
     /** Centrar la imagen **/
@@ -38,16 +34,13 @@ img{
 .btn{
     padding: 1.5rem 2rem;
     text-decoration: none;
-    background-color: var(--color-primario);
     color: #ffffff;
     text-align: center;
     border: none;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
 }
-.btn:hover{
-    background-color: rgb(18, 110, 18);
-}
+
 h1,h2,h3{
     margin: 0;
     text-align: center;
@@ -68,7 +61,6 @@ p{
 .site-header h1{
     text-transform: uppercase;
     letter-spacing: 0.8rem;
-    background-color: var(--color-primario);
     color: #ffffff;
     padding: 2rem 0;
     flex: 0 0 50%;
@@ -136,7 +128,7 @@ p{
 }
 @media (min-width :768px){
     .publicaciones{
-        flex: 0 0 calc(65% - 1rem);
+        flex: 0 0 calc(65% - 2rem);
     }
 }
 
@@ -198,7 +190,6 @@ p{
 .contenido-sidebar h3{
     margin-bottom: 3rem;
     background: url(../img/lines.png) ;
-    color: var(--color-primario);
 }
 .contenido-sidebar h3 span{
     background-color: #ffffff;
@@ -213,7 +204,7 @@ p{
     display: block;
     text-align: center;
     font-size: 2.2rem;
-    color: var(--color-primario);
+    color: black;
 }
 
 .campo{
@@ -245,4 +236,36 @@ p{
 .site-footer .info-header{
     color: #ffffff;
     font-size: 2rem;
+}
+
+
+/** Selector Theme **/
+.theme-selector{
+    display: none;
+}
+@media (min-width: 768px){
+    .theme-selector{
+        display: block;
+        position: fixed;
+        top: 40%;
+        width: 3rem;
+        height: 10rem;
+    }
+    .theme-selector div{
+        width: 100%;
+        height: 33.3%;
+        border: 2px solid white;
+    }
+    .theme-selector div:hover{
+        cursor: pointer;
+    }
+    .to-green{
+        background-color: rgb(7, 59, 7);
+    }
+    .to-blue{
+        background-color: #1F87C4;
+    }
+    .to-red{
+        background-color: rgb(197, 39, 53);
+    }
 }

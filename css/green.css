@@ -1,0 +1,22 @@
+/** Custom properties **/
+:root{
+    --color-primario :rgb(7, 59, 7);
+}
+
+body{
+    background-image: url(../img/hojas.jpg);
+}
+
+.btn{
+    background-color: var(--color-primario);
+}
+.btn:hover{
+    background-color: rgb(18, 110, 18);
+}
+
+.site-header h1{
+    background-color: var(--color-primario);
+}
+.contenido-sidebar h3{
+    color: var(--color-primario);
+}

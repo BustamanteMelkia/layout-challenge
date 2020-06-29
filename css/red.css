@@ -1,0 +1,22 @@
+/** Custom properties **/
+:root{
+    --color-primario : #CA3413;
+}
+
+body{
+    background-image: url(../img/rojo.jpg);
+}
+
+.btn{
+    background-color: var(--color-primario);
+}
+.btn:hover{
+    background-color: rgb(197, 39, 53);
+}
+
+.site-header h1{
+    background-color: var(--color-primario);
+}
+.contenido-sidebar h3{
+    color: var(--color-primario);
+}
