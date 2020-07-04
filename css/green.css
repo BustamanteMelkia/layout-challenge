@@ -20,3 +20,7 @@ body{
 .contenido-sidebar h3{
     color: var(--color-primario);
 }
+.accordion-header{
+    background-color: var(--color-primario) !important;
+    color: #ffffff !important;
+}

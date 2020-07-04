@@ -45,6 +45,10 @@ h1,h2,h3{
     margin: 0;
     text-align: center;
 }
+h2{
+    padding: 2rem 0;
+    text-transform: uppercase;
+}
 p{
     margin: 0;
     text-align: center;
@@ -54,7 +58,8 @@ p{
 @media (min-width: 768px){
     .site-header{
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
@@ -65,6 +70,12 @@ p{
     padding: 2rem 0;
     flex: 0 0 50%;
     border-radius: 0.5rem;
+}
+.reloj{
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 0;
 }
 
 /** ======================= Navegación ========================= **/
@@ -79,7 +90,6 @@ p{
         justify-content: space-evenly;
     }
 }
-
 
 #navegacion ul li{
     text-align: center;
@@ -123,11 +133,11 @@ p{
 }
 
 /** =================== Post ======================== **/
-.publicaciones{
+.caja-principal{
     margin-bottom: 3rem;
 }
 @media (min-width :768px){
-    .publicaciones{
+    .caja-principal{
         flex: 0 0 calc(65% - 2rem);
     }
 }
@@ -208,6 +218,7 @@ p{
 }
 
 .campo{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -217,15 +228,22 @@ p{
 .campo label{
     flex: 0 0 10rem;
 }
-.campo input{
+.campo .entrada{
     flex: 1;
     padding: 1rem 0;
 }
 @media (min-width: 768px){
-    .campo label,
-    .campo input{
+    .formulario .campo label,
+    .formulario .campo .entrada{
         flex: 0 0 100%
     }
+    .formulario-contacto .campo label{
+        flex: 0 0 10rem;
+    }
+    .formulario-contacto .campo .entrada{
+        flex: 1;
+    }
+
 }
 
 /** Footer **/
@@ -268,4 +286,18 @@ p{
     .to-red{
         background-color: rgb(197, 39, 53);
     }
+}
+
+.subir-arriba{
+    padding: 1rem 2rem 0 0;
+    display: block;
+    font-weight: bold;
+    text-align: right;
+    color: #ffffff;
+    text-decoration: none;
+}
+.welcome{
+    width: 100%;
+    margin: 4rem 0;
+    color: black;
 }

@@ -24,42 +24,33 @@ $(document).ready(function(){
     ];
 
     publicaciones.forEach((item, index)=>{
-        const post = `  <article class="post" >
-                            <div class="encabezado-post">
-                                <div class="descripcion-post">
-                                    <h2 class="titulo">
-                                        ${item.title}
-                                    </h2>
-
-                                    <p class="fecha">
-                                        ${item.date}
-                                    </p>
-                                </div>
-                                <div class="comentarios">
-                                    <a href="#" class="btn d-inline-block">92 Comentarios</a>
-                                </div>
-                            </div>
-                            <p class="contenido-post">
-                                ${item.content}
-                            </p>
-                        </article>`;
-
-        $('.publicaciones').append(post);
+        renderPost(item);
     })
 
-    /** Theme selector **/
-    
-    const theme = $('#theme-color');
 
-    $('.to-green').click(function(){
-        theme.attr('href','../css/green.css')
-    })
 
-    $('.to-blue').click(function(){
-        theme.attr('href','../css/blue.css')
-    })
-
-    $('.to-red').click(function(){
-        theme.attr('href','../css/red.css')
-    })
 });
+
+function renderPost(dataPost){
+    const post = `  <article class="post" >
+                        <div class="encabezado-post">
+                            <div class="descripcion-post">
+                                <h2 class="titulo">
+                                    ${dataPost.title}
+                                </h2>
+
+                                <p class="fecha">
+                                    ${dataPost.date}
+                                </p>
+                            </div>
+                            <div class="comentarios">
+                                <a href="#" class="btn d-inline-block">92 Comentarios</a>
+                            </div>
+                        </div>
+                        <p class="contenido-post">
+                            ${dataPost.content}
+                        </p>
+                    </article>`;
+
+    $('.caja-principal').append(post);
+}

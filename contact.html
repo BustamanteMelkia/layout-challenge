@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto JS & JQuery</title>
+        
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 
@@ -11,13 +12,16 @@
     <!--Jquery-->
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
 
-    <!--Slider-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!--Stylesheet for JQuery UI-->
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.min.css">
+    <!-- Script for JQuery UI -->
+    <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
     <!--Moment js: a pluggin for dates-->
     <script type="text/javascript" src="js/moment.js"></script>
+
 </head>
 <body>
     <div class="theme-selector">
@@ -41,15 +45,44 @@
                 <li><a href="contact.html">Contacto</a></li>
             </ul>
         </nav>
-        <div class="galeria">
-            <div><img src="img/cielo.jpg" alt="cielo"></div>
-            <div><img src="img/hojas.jpg" alt="hojas"></div>
-            <div><img src="img/rojo.jpg" alt="arboles"></div>
-        </div>
-
         <main class="contenido-principal">
-            <div class="caja-principal">
+            <div class="contenedor caja-principal" >
+                <form  class="formulario-contacto">
+                    <legend>Formulario de Contacto</legend>
+                    <div class="campo">
+                        <label for="first-name">Nombre</label>
+                        <input class="entrada" type="text" name="first-name" placeholder="Nombre" id="first-name">
+                    </div>
+                    <div class="campo">
+                        <label for="last-name">Apellido</label>
+                        <input class="entrada" type="text" name="last-name" placeholder="Nombre" id="last-name">
+                    </div>
+                    <div class="campo">
+                        <label for="email">Email</label>
+                        <input class="entrada" type="email" name="email" placeholder="Correo Electrónico" required id="email">
+                    </div>
+                    <div class="campo">
+                        <label for="sexo">Sexo</label>
+                        <select name="sexo" class="entrada">
+                            <option value="Masculino">Masculino</option> 
+                            <option value="Femenino" selected>Femenino</option>
+                            <option value="Indistinto">Indistinto</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="nacimiento">Nacimiento</label>
+                        <input class="entrada" type="date" name="nacimiento" placeholder="Fecha de Nacimiento" required id="nacimiento">
+                    </div>
+                    <div class="campo">
+                        <label for="edad">Edad</label>
+                        <input class="entrada" type="text" name="edad" placeholder="Edad" required id="edad">
+                    </div>
 
+                    <div id="registrar">
+                        <input type="submit" class="btn" value="Registrarse">
+                    </div>
+                    
+                </form>
             </div>
             <aside class="sidebar">
                 <div class="contenido-sidebar">
